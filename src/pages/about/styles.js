@@ -1,6 +1,6 @@
 import { createStyles } from "@mantine/core";
 import about from "../../assets/about.png";
-import img1 from "../../assets/teamCard.png";
+import img1 from "../../assets/teamcard.png";
 import img2 from "../../assets/teambg.png";
 export const useStyles = createStyles((theme) => ({
   top: {
@@ -20,13 +20,13 @@ export const useStyles = createStyles((theme) => ({
     [`@media (max-width: 800px)`]: {
       height: "450px",
       backgroundSize: "200% 450px",
-      backgroundPosition:'right center'
+      backgroundPosition: "right center",
     },
   },
   title1: {
     display: "flex",
     gap: "10px",
-    textShadow:'5px 5px 2px rgb(0,0,0,0.5)',
+    textShadow: "5px 5px 2px rgb(0,0,0,0.5)",
     borderBottom: "3px solid cyan",
     alignSelf: "flex-end",
     marginRight: "70px",
@@ -89,7 +89,7 @@ export const useStyles = createStyles((theme) => ({
       width: "80%",
       position: "absolute",
       bottom: -10,
-      left:0,
+      left: 0,
       height: "3px",
       backgroundColor: theme.colors.cyan,
     },

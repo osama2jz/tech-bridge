@@ -1,7 +1,5 @@
 import { createStyles } from "@mantine/core";
 import img from "../../assets/contact.png";
-import img1 from "../../assets/teamCard.png";
-import img2 from "../../assets/teambg.png";
 export const useStyles = createStyles((theme) => ({
   top: {
     height: "500px",
