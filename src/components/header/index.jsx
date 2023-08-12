@@ -91,7 +91,11 @@ const Header = ({ opened, toggle }) => {
         >
           Contact Us
         </Link>
-        <Button rightIcon={<ArrowNarrowRight />} bg={theme.colors.cyan}>
+        <Button
+          rightIcon={<ArrowNarrowRight />}
+          bg={theme.colors.cyan}
+          onClick={() => navigate("/signup")}
+        >
           Register Now
         </Button>
       </Flex>

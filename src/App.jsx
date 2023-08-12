@@ -10,6 +10,8 @@ import About from "./pages/about";
 import Services from "./pages/services";
 import Technology from "./pages/Technology";
 import ContactUs from "./pages/contactUs";
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
 
 function App() {
   const [opened, { toggle }] = useDisclosure(false);
@@ -22,15 +24,19 @@ function App() {
   }, [pathname]);
   return (
     <Box style={{ position: "relative" }}>
-      <Header opened={opened} toggle={toggle} />
+      {pathname !== "/signin" && pathname !== "/signup" && (
+        <Header opened={opened} toggle={toggle} />
+      )}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/technology-conferences" element={<Technology />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
-      <Footer />
+      {pathname !== "/signin" && pathname !== "/signup" && <Footer />}
     </Box>
   );
 }
