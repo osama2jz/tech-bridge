@@ -15,6 +15,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             cyan: "#099DCC",
           },
           primaryColor: "purple",
+          globalStyles: (theme) => ({
+            '.mantine-1gp3704':{
+              width:'90% !important'
+            }
+          }),
         }}
       >
         <App />

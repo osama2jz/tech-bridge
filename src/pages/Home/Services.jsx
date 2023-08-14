@@ -19,39 +19,47 @@ const Services = () => {
     {
       image: a1,
       title: "Software Development",
+      bullets:
+        "Mobile App Development. Web Application Development. E-commerce Website Development. Custom Software Development. Cloud-based Software Development. Artificial Intelligence and Machine Learning Development. Blockchain Development. Internet of Things (IoT) Development. Augmented Reality and Virtual Reality Development. Gaming Software Development",
       content:
         "Software developers utilize various programming languages, tools, and methodologies to craft reliable, efficient, and user-friendly applications for diverse industries and purposes. As technology continues to evolve, software development remains at the forefront of innovation, driving progress and shaping the way we interact with digital systems in our daily lives",
     },
     {
       image: a2,
       title: "Network Infrastructure",
+      bullets:
+        "Network infrastructure upgrade for a large enterprise. Cloud network migration for a small business. Network security audit and implementation for a financial institution. Wireless network implementation for a hospital. Network virtualization project for a government agency. Network consolidation and optimization for a multinational corporation. Network disaster recovery planning and implementation for a non-profit organization. Network monitoring and management implementation for a university. Network segmentation and access control implementation for a retail chain. Network performance optimization for a telecommunications company",
       content:
         "Network infrastructure refers to the foundation of interconnected hardware, software, and communication protocols that facilitate data exchange and connectivity within an organization or across the internet.",
     },
     {
       image: a3,
       title: "Data Management",
+      bullets:
+        "Data Warehousing and Business Intelligence. Master Data Management. Data Governance and Quality Management. Data Migration and Integration. Big Data Analytics and Management. Cloud Data Management. Data Security and Privacy Management. Data Visualization and Reporting. Data Science and Machine Learning. IoT Data Management and Analytics",
       content:
         "Data management refers to the process of collecting, storing, organizing, and utilizing data in a structured and secure manner. In today's data-driven world, businesses and organizations generate and accumulate vast amounts of information from various sources",
     },
     {
       image: a4,
       title: "Cyber Security",
+      bullets:
+        "Network Security Implementation. Endpoint Security Implementation. Cloud Security Implementation. Identity and Access Management Implementation. Data Loss Prevention Implementation. Security Information and Event Management Implementation. Vulnerability Management Implementation. Penetration Testing and Ethical Hacking Implementation. Incident Response and Disaster Recovery Implementation. Cybersecurity Awareness and Training Implementation",
       content:
         "Cybersecurity is the practice of protecting computer systems, networks, and data from unauthorized access, attacks, and damage. In an increasingly digitized world, where information is a valuable asset, cybersecurity plays a pivotal role in safeguarding individuals",
     },
-    {
-      image: a5,
-      title: "Gaming Software Development",
-      content:
-        "Gaming software development is a dynamic and creative process that focuses on designing and creating interactive, entertaining, and immersive video games. Game developers use their expertise in programming, design, and storytelling to bring virtual worlds to life and engage players in captivating experiences.",
-    },
-    {
-      image: a6,
-      title: "Blockchain Development",
-      content:
-        "Blockchain development involves designing and implementing smart contracts, consensus algorithms, and cryptographic techniques to ensure data integrity and trust among network participants.",
-    },
+    // {
+    //   image: a5,
+    //   title: "Gaming Software Development",
+    //   content:
+    //     "Gaming software development is a dynamic and creative process that focuses on designing and creating interactive, entertaining, and immersive video games. Game developers use their expertise in programming, design, and storytelling to bring virtual worlds to life and engage players in captivating experiences.",
+    // },
+    // {
+    //   image: a6,
+    //   title: "Blockchain Development",
+    //   content:
+    //     "Blockchain development involves designing and implementing smart contracts, consensus algorithms, and cryptographic techniques to ensure data integrity and trust among network participants.",
+    // },
   ];
   return (
     <Box p="50px">

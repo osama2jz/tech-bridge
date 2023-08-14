@@ -1,9 +1,22 @@
-import { Box, Divider, Stack, Text } from "@mantine/core";
+import {
+  Box,
+  Button,
+  Divider,
+  Group,
+  List,
+  Modal,
+  Stack,
+  Text,
+  Title,
+  useMantineTheme,
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 import React, { useState } from "react";
-import a1 from "../../assets/a1.png";
 
 const ServiceCard = ({ obj }) => {
   const [show, setShow] = useState(false);
+  const theme = useMantineTheme();
+  const [opened, setOpened] = useState(false);
   return (
     <Box
       w={350}
@@ -11,13 +24,14 @@ const ServiceCard = ({ obj }) => {
       pb="md"
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
+      onClick={() => setOpened(true)}
       style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         boxShadow: "0px 10px 10px rgb(0,0,0,0.2)",
         position: "relative",
-        cursor:'pointer'
+        cursor: "pointer",
       }}
     >
       <img src={obj.image} width="350px" />
@@ -47,6 +61,35 @@ const ServiceCard = ({ obj }) => {
           </Text>
         </Stack>
       )}
+      <Modal
+        onClose={() => setOpened(false)}
+        opened={opened}
+        centered
+        size={"lg"}
+        withCloseButton={false}
+        styles={{body:{overflow:'hidden'}}}
+        transitionProps={{ transition: "rotate-left" }}
+      >
+        <Title align="center" mb="lg" order={2}>
+          {obj?.title}
+        </Title>
+        <List>
+          {obj?.bullets?.split(".").map((item, ind) => (
+            <List.Item key={ind}>{item}</List.Item>
+          ))}
+        </List>
+        <Group position="center" mt="md">
+          <Button
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpened(false);
+            }}
+            bg={theme.colors.cyan}
+          >
+            Close
+          </Button>
+        </Group>
+      </Modal>
     </Box>
   );
 };

@@ -77,7 +77,7 @@ const About = () => {
         </Stack>
         <img src={about2} height="100%" />
       </Flex>
-      <Box p="50px">
+      {/* <Box p="50px">
         <Flex className={classes.title3}>
           <Title align="center">Our</Title>
           <Title color={theme.colors.cyan}>Team</Title>
@@ -96,7 +96,7 @@ const About = () => {
             <TeamCard obj={obj} key={ind} />
           ))}
         </Flex>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

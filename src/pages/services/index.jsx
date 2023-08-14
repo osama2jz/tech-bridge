@@ -28,7 +28,7 @@ const Services = () => {
         <Title className={classes.title1}>Services</Title>
       </Box>
       <Ser />
-      <Box p="50px">
+      {/* <Box p="50px">
         <Flex className={classes.title3}>
           <Title align="center">Our</Title>
           <Title color={theme.colors.cyan}>Expertise</Title>
@@ -57,8 +57,8 @@ const Services = () => {
               }}
             />
           ))}
-        </Flex>
-      </Box>
+        </Flex> 
+      </Box>*/}
     </Box>
   );
 };

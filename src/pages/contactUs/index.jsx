@@ -1,4 +1,5 @@
 import {
+  Anchor,
   BackgroundImage,
   Box,
   Button,
@@ -64,8 +65,18 @@ const ContactUs = () => {
             </Text>
             <Text>support@techbridge19.com</Text>
           </Stack>
+          <Stack className={classes.cont} p="sm">
+            <Text color={theme.colors.purple} fw="bold">
+              Linkedin
+            </Text>
+            <Anchor
+              href={"https://www.linkedin.com/company/techbridge19-consulting"}
+            >
+              https://www.linkedin.com/company/techbridge19-consulting
+            </Anchor>
+          </Stack>
           <Group>
-            <Image src={facebook} width={50}/>
+            <Image src={facebook} width={50} />
             <Image src={insta} width={50} />
             <Image src={linkedin} width={50} />
           </Group>
