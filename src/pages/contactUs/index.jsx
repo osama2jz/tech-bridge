@@ -1,4 +1,5 @@
 import {
+  Alert,
   Anchor,
   BackgroundImage,
   Box,
@@ -14,17 +15,65 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useStyles } from "./styles";
 import facebook from "../../assets/facebook.png";
 import insta from "../../assets/insta.png";
 import linkedin from "../../assets/linkedin.png";
+import tick from "../../assets/tick.svg";
+import { useForm } from "@mantine/form";
 
 const ContactUs = () => {
   const isMobile = useMediaQuery("(max-width: 1000px)");
   const isMobile2 = useMediaQuery("(max-width: 800px)");
+  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
   const { classes } = useStyles();
   const theme = useMantineTheme();
+
+  const form = useForm({
+    initialValues: {
+      email: "",
+      fullName: "",
+      subject: "",
+      message: "",
+    },
+
+    validate: {
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
+      fullName: (value) => (value?.length < 1 ? "Please Enter Name" : null),
+      subject: (value) => (value?.length < 1 ? "Please Enter Subject" : null),
+      message: (value) => (value?.length < 1 ? "Please Enter Message" : null),
+    },
+  });
+
+  useEffect(() => {
+    setTimeout(() => setSent(false), 3000);
+  }, [sent]);
+  const handleSubmit = async (e) => {
+    // Replace 'your-formspree-endpoint' with your Formspree endpoint
+    setLoading(true);
+    const response = await fetch("https://formspree.io/f/xqkvqaqd", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        Name: e.fullName,
+        Email: e.email,
+        Message: e.message,
+        subject: e.subject,
+      }),
+    });
+    if (response.ok) {
+      form.reset();
+      console.log("here");
+      setSent(true);
+      setLoading(false);
+    } else {
+      setLoading(false);
+    }
+  };
   return (
     <Box>
       <Box className={classes.top}>
@@ -89,7 +138,7 @@ const ContactUs = () => {
             padding: "20px",
             borderRadius: "10px",
           }}
-          // onSubmit={form.onSubmit((values) => console.log(values))}
+          onSubmit={form.onSubmit((values) => handleSubmit(values))}
         >
           <Stack w="100%">
             <Title order={2} color={theme.colors.purple} fw={400}>
@@ -100,20 +149,26 @@ const ContactUs = () => {
             </Title>
             <TextInput
               placeholder="Full Name"
-              // {...form.getInputProps("fullName")}
+              {...form.getInputProps("fullName")}
             />
-            <TextInput placeholder="Email" />
+            <TextInput placeholder="Email" {...form.getInputProps("email")} />
             <TextInput
               placeholder="Subject"
-              // {...form.getInputProps("interestedIn")}
+              {...form.getInputProps("subject")}
             />
 
             <Textarea
               placeholder="Write details here"
-              // {...form.getInputProps("details")}
+              {...form.getInputProps("message")}
             />
-            <Button bg={theme.colors.purple} my="lg" type="submit">
-              Send Message
+            <Button
+              bg={theme.colors.purple}
+              my="lg"
+              type="submit"
+              loading={loading}
+              leftIcon={sent && <img src={tick} width={"20px"} />}
+            >
+              {sent ? "Message Sent" : "Send Message"}
             </Button>
           </Stack>
         </form>
