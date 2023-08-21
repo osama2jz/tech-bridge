@@ -48,18 +48,22 @@ const Services = () => {
       content:
         "Cybersecurity is the practice of protecting computer systems, networks, and data from unauthorized access, attacks, and damage. In an increasingly digitized world, where information is a valuable asset, cybersecurity plays a pivotal role in safeguarding individuals",
     },
-    // {
-    //   image: a5,
-    //   title: "Gaming Software Development",
-    //   content:
-    //     "Gaming software development is a dynamic and creative process that focuses on designing and creating interactive, entertaining, and immersive video games. Game developers use their expertise in programming, design, and storytelling to bring virtual worlds to life and engage players in captivating experiences.",
-    // },
-    // {
-    //   image: a6,
-    //   title: "Blockchain Development",
-    //   content:
-    //     "Blockchain development involves designing and implementing smart contracts, consensus algorithms, and cryptographic techniques to ensure data integrity and trust among network participants.",
-    // },
+    {
+      image: a5,
+      title: "ERP Implementation",
+      bullets:
+        "Project Charter. System Design. Business process mapping. Business policy optimization. Configuration. Thorough Testing. Quality machanism. Ongoing support",
+      content:
+        "Gaming software development is a dynamic and creative process that focuses on designing and creating interactive, entertaining, and immersive video games. Game developers use their expertise in programming, design, and storytelling to bring virtual worlds to life and engage players in captivating experiences",
+    },
+    {
+      image: a6,
+      title: "Tech Executive Advisory",
+      bullets:
+        "This company offers CIO as a service, providing experienced technology executives to help businesses develop and execute their IT strategies. CTO Boost provides CTO as a service, offering expert guidance on technology strategy, product development, and team management. This company provides ICT Director as a service, offering experienced technology executives to help businesses develop and implement their technology strategies. TechCXO offers a range of tech executive advisory services, including CIO as a service, CTO as a service, and other executive-level technology consulting. This company provides Tech Executive as a service, offering experienced technology executives to help businesses transform their IT organizations and drive innovation",
+      content:
+        "Blockchain development involves designing and implementing smart contracts, consensus algorithms, and cryptographic techniques to ensure data integrity and trust among network participants.",
+    },
   ];
   return (
     <Box p="50px">

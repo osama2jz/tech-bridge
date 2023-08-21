@@ -12,6 +12,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import React, { useState } from "react";
+import { CircleCheck } from "tabler-icons-react";
 
 const ServiceCard = ({ obj }) => {
   const [show, setShow] = useState(false);
@@ -29,12 +30,24 @@ const ServiceCard = ({ obj }) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        boxShadow: "0px 10px 10px rgb(0,0,0,0.2)",
+        boxShadow: show
+          ? "0px 10px 10px rgb(0,0,0,0.5)"
+          : "0px 10px 10px rgb(0,0,0,0.2)",
         position: "relative",
+        transition: "0.3s all ease-in-out",
         cursor: "pointer",
+        overflow: "hidden",
+        borderRadius: "10px",
       }}
     >
-      <img src={obj.image} width="350px" />
+      <img
+        src={obj.image}
+        width="350px"
+        style={{
+          transform: show && "scale(1.1)",
+          transition: "0.3s all ease-in-out",
+        }}
+      />
       <Text fw={"bold"} fz={"lg"}>
         {obj?.title}
       </Text>
@@ -45,7 +58,7 @@ const ServiceCard = ({ obj }) => {
           align="center"
           style={{
             color: "white",
-            backgroundColor: "rgb(98, 160, 180, 0.6)",
+            backgroundColor: "rgb(98, 160, 180, 0.2)",
             width: "100%",
             height: "100%",
             top: 0,
@@ -53,11 +66,7 @@ const ServiceCard = ({ obj }) => {
           }}
         >
           <Text fw={"bold"} fz={"lg"}>
-            {obj?.title}
-          </Text>
-          <Divider color="white" w="100%" />
-          <Text fz={"md"} align="center">
-            {obj?.content}
+            Read More
           </Text>
         </Stack>
       )}
@@ -65,20 +74,36 @@ const ServiceCard = ({ obj }) => {
         onClose={() => setOpened(false)}
         opened={opened}
         centered
-        size={"lg"}
+        size={"auto"}
         withCloseButton={false}
-        styles={{body:{overflow:'hidden'}}}
-        transitionProps={{ transition: "rotate-left" }}
+        styles={{
+          body: { overflow: "hidden" },
+          content: { borderRadius: "20px" },
+        }}
+        transitionProps={{ transition: "scale" }}
       >
-        <Title align="center" mb="lg" order={2}>
+        <Title align="center" mb="lg" order={2} color={theme.colors.purple}>
           {obj?.title}
         </Title>
-        <List>
-          {obj?.bullets?.split(".").map((item, ind) => (
-            <List.Item key={ind}>{item}</List.Item>
-          ))}
-        </List>
-        <Group position="center" mt="md">
+        <Group position="center" p="lg">
+          <img src={obj.image} width="400px" style={{borderRadius:'10px'}}/>
+          <List
+            p="sm"
+            icon={
+              <CircleCheck
+                fill={theme.colors.cyan}
+                color="white"
+                size={30}
+                style={{ marginTop: "0px" }}
+              />
+            }
+          >
+            {obj?.bullets?.split(".").map((item, ind) => (
+              <List.Item key={ind}>{item}</List.Item>
+            ))}
+          </List>
+        </Group>
+        <Group position="right" mt="md">
           <Button
             onClick={(e) => {
               e.stopPropagation();
