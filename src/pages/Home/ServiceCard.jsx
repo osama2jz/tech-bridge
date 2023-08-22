@@ -86,9 +86,10 @@ const ServiceCard = ({ obj }) => {
           {obj?.title}
         </Title>
         <Group position="center" p="lg">
-          <img src={obj.image} width="400px" style={{borderRadius:'10px'}}/>
+          <img src={obj.image} width="400px" style={{ borderRadius: "10px" }} />
           <List
             p="sm"
+            style={{ maxWidth: "60%" }}
             icon={
               <CircleCheck
                 fill={theme.colors.cyan}
