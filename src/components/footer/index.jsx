@@ -35,7 +35,7 @@ const Footer = () => {
           <Anchor className={classes.icon} target="_blank">
             <img src={tw} width={"30px"} />
           </Anchor>
-          <Anchor className={classes.icon} target="_blank">
+          <Anchor className={classes.icon} href="https://www.linkedin.com/company/techbridge19-consulting" target="_blank">
             <img src={lk} width={"30px"} className={classes.icon} />
           </Anchor>
           <Anchor className={classes.icon} target="_blank">
@@ -43,7 +43,13 @@ const Footer = () => {
           </Anchor>
         </Flex>
       </Flex>
-      <Flex gap={"lg"} align={"center"} justify={'center'} className={classes.navigationBar} wrap={"wrap"}>
+      <Flex
+        gap={"lg"}
+        align={"center"}
+        justify={"center"}
+        className={classes.navigationBar}
+        wrap={"wrap"}
+      >
         <Link className={classes.link} to="/">
           Home
         </Link>
@@ -62,9 +68,9 @@ const Footer = () => {
       </Flex>
 
       <Text align="center" w={"75%"} fz={"md"}>
-        Lörem ipsum od ohet dilogi. Bell trabel, samuligt, ohöbel utom diska.
-        Jinesade bel när feras redorade i belogi. FAR paratyp i muvåning, och
-        pesask vyfisat. Viktiga poddradio har un mad och inde.
+        Techbridge19 offers cutting-edge technology solutions tailored for
+        businesses, big or small. Our expert team is dedicated to propelling
+        clients towards their goals with the latest tech innovations.
       </Text>
       <Flex gap={"30px"}>
         <Anchor fz="md" color="rgb(255,255,255,0.7)">

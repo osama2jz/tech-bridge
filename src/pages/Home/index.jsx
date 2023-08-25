@@ -145,7 +145,7 @@ const Home = () => {
       </Flex>
       <Services />
       <Acheivements />
-      <Test />
+      {/* <Test /> */}
     </Box>
   );
 };

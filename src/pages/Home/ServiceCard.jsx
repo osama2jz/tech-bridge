@@ -43,6 +43,7 @@ const ServiceCard = ({ obj }) => {
       <img
         src={obj.image}
         width="350px"
+        height={"285px"}
         style={{
           transform: show && "scale(1.1)",
           transition: "0.3s all ease-in-out",

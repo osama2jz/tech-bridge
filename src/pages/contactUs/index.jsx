@@ -67,7 +67,6 @@ const ContactUs = () => {
     });
     if (response.ok) {
       form.reset();
-      console.log("here");
       setSent(true);
       setLoading(false);
     } else {
