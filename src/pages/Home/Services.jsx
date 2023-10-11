@@ -9,6 +9,8 @@ import a3 from "../../assets/a3.png";
 import a4 from "../../assets/a4.png";
 import a5 from "../../assets/a5.png";
 import a6 from "../../assets/a6.png";
+import a7 from "../../assets/a8.png";
+import a8 from "../../assets/a7.png";
 
 const Services = () => {
   const { classes } = useStyles();
@@ -61,6 +63,21 @@ const Services = () => {
       title: "ERP Implementation",
       bullets:
         "Project Charter. System Design. Business process mapping. Business policy optimization. Configuration. Thorough Testing. Quality machanism. Ongoing support",
+      content:
+        "Gaming software development is a dynamic and creative process that focuses on designing and creating interactive, entertaining, and immersive video games. Game developers use their expertise in programming, design, and storytelling to bring virtual worlds to life and engage players in captivating experiences",
+    },
+    {
+      image: a8,
+      title: "Event Management",
+      bullets:
+        "Venue selection. License and permit. Registration and ticketing process. Speaker selection. Marketing and promotion. Budget management.Event execution. Post-event analysis",
+      content:
+        "Gaming software development is a dynamic and creative process that focuses on designing and creating interactive, entertaining, and immersive video games. Game developers use their expertise in programming, design, and storytelling to bring virtual worlds to life and engage players in captivating experiences",
+    },
+    {
+      image: a7,
+      title: "Human resource Services",
+      bullets: "Recruitment and Selection. Employee visa and insurance services. Executive coaching. Training and Development. Performance Management. Employee Relations. Compensation and Benefits",
       content:
         "Gaming software development is a dynamic and creative process that focuses on designing and creating interactive, entertaining, and immersive video games. Game developers use their expertise in programming, design, and storytelling to bring virtual worlds to life and engage players in captivating experiences",
     },
