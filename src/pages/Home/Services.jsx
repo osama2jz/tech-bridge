@@ -76,7 +76,7 @@ const Services = () => {
     },
     {
       image: a7,
-      title: "Human resource Services",
+      title: "Human Resource Services",
       bullets: "Recruitment and Selection. Employee visa and insurance services. Executive coaching. Training and Development. Performance Management. Employee Relations. Compensation and Benefits",
       content:
         "Gaming software development is a dynamic and creative process that focuses on designing and creating interactive, entertaining, and immersive video games. Game developers use their expertise in programming, design, and storytelling to bring virtual worlds to life and engage players in captivating experiences",

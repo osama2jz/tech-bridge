@@ -96,7 +96,7 @@ const Home = () => {
             Empowering businesses through innovation technology solutions
           </Text>
         </Stack>
-        <SimpleGrid cols={2} spacing={40}>
+        {/* <SimpleGrid cols={2} spacing={40}>
           <Flex align={"center"} gap="md">
             <img src={s1} />
             <Stack spacing={"0px"}>
@@ -141,7 +141,7 @@ const Home = () => {
               </Text>
             </Stack>
           </Flex>
-        </SimpleGrid>
+        </SimpleGrid> */}
       </Flex>
       <Services />
       <Acheivements />
